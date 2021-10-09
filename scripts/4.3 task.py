@@ -7,7 +7,7 @@ web_services_previous_ip = {"drive.google.com": '', "mail.google.com": '', "goog
 with open("data_file.json", "w") as json_file:
     json.dump(web_services_previous_ip, json_file)
 with open("data_file.yml", "w") as yaml_file:
-    json.dump(web_services_previous_ip, yaml_file)
+    yaml.dump(web_services_previous_ip, yaml_file)
 
 count = 1
 while count < 3:
