@@ -16,7 +16,7 @@ while count < 3:
         ip_old = web_services_previous_ip[url]
 
         if ip_old != '' and ip != ip_old:
-            print('[ERROR] <', url, '> IP mismatch:', '<', ip, '>')
+            print('[ERROR] <', url, '> IP mismatch:', '<', ip_old, '>', '<', ip, '>')
         else:
             print(url, ip)
 
