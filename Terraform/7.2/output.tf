@@ -11,7 +11,7 @@ output "caller_arn" {
 }
 
 output "private_ip" {
-  value = aws_instance.net_test[0].private_ip
+  value = aws_instance.net_test.private_ip
 }
 
 output "aws_region" {
@@ -19,6 +19,6 @@ output "aws_region" {
 }
 
 output "private_subnet" {
-  value = aws_instance.net_test[0].subnet_id
+  value = aws_instance.net_test.subnet_id
 }
 
