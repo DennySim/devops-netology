@@ -1,0 +1,23 @@
+# atlantis.yaml
+version: 3
+projects:
+- dir: .
+  autoplan:
+    when_modified: ["**/*.tf", "*.tf*"] # 2)
+
+
+# 1)
+- dir: .
+  workspace: stag
+  workflow: for-all-workspaces
+- dir: .
+  workspace: prod
+  workflow: for-all-workspaces
+
+workflows:
+  for-all-workspaces:
+    plan:
+      steps:
+      - init
+      - plan
+      - apply

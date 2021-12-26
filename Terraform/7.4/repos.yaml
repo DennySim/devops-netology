@@ -1,0 +1,12 @@
+# repos.yaml
+repos:
+- id: github.com/DennySim/devops-netology # 1)
+  
+allowed_overrides: [workflow]  # 2)
+ 
+default:
+  plan:
+    steps: [init, plan]
+  apply:
+    steps: [apply]
+        extra_args: ["-lock=false"] # 3)
